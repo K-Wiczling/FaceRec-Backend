@@ -1,12 +1,10 @@
-const http = require ('http');
+const express = require('express');
 
-const server = http.createServer((request, response) => {
-    const user = {
-        name: 'Karol',
-        place: 'Rumia'
-    }
-    response.setHeader('Content-type', 'application/json')
-    response.end(JSON.stringify(user))
-})
+const app = express();
 
-server.listen(3000)
+app.get('/', (req, res) => {
+    const n = (Number(req.query.id) * Number(req.query.di)).toString();
+    res.send(n);
+});
+
+app.listen(3000)
