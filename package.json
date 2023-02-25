@@ -7,7 +7,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon server.js"
   },
   "name": "facerec-backend",
   "version": "1.0.0",
